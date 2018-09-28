@@ -1,0 +1,74 @@
+// Styling for the content setion
+.content
+	width: 100%
+	display: flex
+
+  // Styling for the image grid area of the content section
+	.image-grid
+		width: 50%
+		margin: 5px 0 5px 0
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		grid-gap: 5px
+
+		.grid-image
+			width: 100%
+			transform: scale(.3)
+			opacity: 0
+			transition: transform 300ms ease-in
+
+		.img-1
+			grid-column: 1 / span 3
+			grid-row: 1 / span 3
+
+		.img-2
+			grid-column: 4 / 6
+			grid-row: 3
+
+		.img-3
+			grid-column: 4 / 5
+			grid-row: 4
+
+
+		.img-4
+			grid-column: 2 / 4
+			grid-row: 4
+
+		.img-5
+			grid-column: 1 / 2
+			grid-row: 4
+
+  // Styling for the copy area of the content section
+	.content-copy
+		width: 50%
+		position: relative
+		padding-left: 3rem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+
+		img
+			position: absolute
+			right: 0
+			bottom: 0
+			width: 80%
+			opacity: .05
+			z-index: -1
+
+		.copy-title
+			margin-top: 8rem
+			width: 100%
+
+			&::after
+				content: ""
+				height: 3px
+				width: 100%
+				display: inline-block
+				margin-top: 1rem
+				background-color: $black
+
+		.copy
+			transform: translateX(500px)
+			opacity: 0
+			transition: transform 750ms ease-out, opacity 500ms ease-in-out
